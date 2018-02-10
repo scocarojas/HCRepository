@@ -1,0 +1,69 @@
+[
+  {
+    "name": "riddle_0",
+    "description": "How do you tell a boy snowman apart from a girl snowman?",
+    "answer": "snowballs"
+  },
+  {
+    "name": "riddle_1",
+    "description": "What’s a lifeguard’s favorite game?",
+    "answer": "pool"
+  },
+  {
+    "name": "riddle_2",
+    "description": "What do you call a three humped camel?",
+    "answer": "pregnant"
+  },
+  {
+    "name": "riddle_3",
+    "description": "What do you get when you mix a snowman and a wolf?",
+    "answer": "frostbite"
+  },
+  {
+    "name": "riddle_4",
+    "description":
+      "Say the following: roast, boast, coast, post. What do you put in a toaster?",
+    "answer": "bread"
+  },
+  {
+    "name": "riddle_5",
+    "description": "What never gets any wetter no matter how hard it rains?",
+    "answer": "water"
+  },
+  {
+    "name": "riddle_6",
+    "description": "What three letters change a girl into a woman?",
+    "answer": "age"
+  },
+  {
+    "name": "riddle_7",
+    "description": "Which berry makes a harsh noise?",
+    "answer": "raspberry"
+  },
+  {
+    "name": "riddle_8",
+    "description": "What do you get when you mix lemons with gun powder?",
+    "answer": "lemonades"
+  },
+  {
+    "name": "riddle_9",
+    "description": "Which word in the dictionary is spelled incorrectly?",
+    "answer": "incorrectly"
+  },
+  {
+    "name": "riddle_10",
+    "description":
+      "What’s in a man’s pants that you won’t find in a girl’s dress?",
+    "answer": "pockets"
+  },
+  {
+    "name": "riddle_11",
+    "description": "What is the saddest fruit in the world?",
+    "answer": "blueberry"
+  },
+    {
+    "name": "riddle_12",
+    "description": "",
+    "answer": ""
+  }
+]

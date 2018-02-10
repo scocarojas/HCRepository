@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>{{ page_title }}</title>
+</head>
+
+<body>
+    <!-- TITLE -->
+    <div class="main">
+        <div class="overlay">
+            <div class="container" style="max-width: 500px;">
+                <a href="/ ">
+                    <h1 class="title_riddle">Riddle Game </h1>
+                </a>
+                <h3 class="username">Welcome, {{username}}</h3>
+                <div class="mailing-list">
+                    <!-- JSON DATA-->
+                    <h3 class="riddle"> {{ company_data[riddle_index]["description"] }} </h3>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- USER BOX -->
+                <div class="col-md-4">
+                    <div class="panel panel-primary" style="border:0px; padding-top:15px;">
+                        <div class="panel-heading top-bar" style="background-color: #d3554d;">
+                            <h3 class="panel-title">users</h3>
+                        </div>
+                        <!-- USER LIST -->
+                        <div class="panel-body msg_container_base">
+                            {% for user in online_users %}
+                            <li class="bullets">{{user}}</li>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="col-md-4">
+                    <form method="POST" class="form-inline">
+                        <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
+                        <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
+                        <button class="btn btn-danger">send</button>
+                    </form>
+                </div>
+                <!-- WRONG ANSWERS BOX -->
+                <div class="col-md-4">
+                    <div class="panel panel-primary" style="border:0px; padding-top:15px;">
+                        <div class="panel-heading top-bar" style="background-color: #d3554d;">
+                            <h3 class="panel-title">wrong answers</h3>
+                        </div>
+                        <!-- WRONG ANSWERS LIST -->
+                        <div class="panel-body msg_container_base">
+                            {% for message in chat_messages %}
+                            <li class="bullets">{{message}}</li>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onbeforeunload = function (e) {
+            $.post(window.location.href + '/log_off');
+            return undefined;
+        }
+    </script>
+
+    <script type="text/javascript">
+        setInterval(function () {
+            $.getJSON({
+                url: "/users/online",
+                success: function (data) {
+                    onlineUsersList = document.getElementById("online-users-list");
+                    onlineUsersList.innerHTML = '';
+                    for (var i = 0; i < data.length; i++) {
+                        var li = document.createElement("li style="list - style - type: none; ");
+                        li.appendChild(document.createTextNode(data[i]));
+                        onlineUsersList.appendChild(li);
+                    }
+                }
+            });
+        }, 5000);
+    </script>
+
+    <!--make boxes autoscroll to the bottom-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".msg_container_base").stop().animate({ scrollTop: $(".msg_container_base")[0].scrollHeight }, 500);
+        });
+    </script>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>&copy;2018 Jonathan Bencomo</h4>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="credit">A project for the Code Institute, Dublin - Ireland </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
