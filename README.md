@@ -12,7 +12,7 @@ Practical Python Milestone project by Jonathan Bencomo - Riddle game for the Cod
 # Deployment instructions:
 - Download the project files in your computer 
     * install the requirements indicated in requirements.txt
-    * python3 run.py
+    * type in the terminal: "python3 run.py" to run the app
 
 # Sources:
     * https://riddles.fyi/funny-riddles/page/8/
