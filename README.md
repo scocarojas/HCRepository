@@ -2,8 +2,6 @@
 
 Practical Python Milestone project by Jonathan Bencomo - Riddle game for the Code Institute, Dublin 2018
 
-[![Build Status](https://travis-ci.org/Bencomo/Riddle.svg?branch=master)](https://travis-ci.org/Bencomo/Riddle)
-
 # Project guidelines:
 # CREATE A 'RIDDLE-ME-THIS' GUESSING GAME
 * Build a web application game that asks players to guess the answer to a pictorial or text-based riddle.
