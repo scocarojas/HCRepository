@@ -3,4 +3,4 @@ python:
     - "3.4"
 install: "pip3 install -r requirements.txt"
 script:
-    - python run.py
+    - python3 run.py
