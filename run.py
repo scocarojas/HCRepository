@@ -125,4 +125,4 @@ def log_user_off(username):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host=os.environ.get('IP', '0.0.0.0'), port=int(os.environ.get('PORT', 0)), debug=True)
