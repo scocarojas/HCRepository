@@ -1,1 +1,1 @@
-web: gunicorn NewRiddle.wsgi:application
+web: python run.py
