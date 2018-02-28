@@ -6,6 +6,7 @@ chardet==2.2.1
 click==6.7
 colorama==0.2.5
 dj-database-url==0.4.2
+gunicorn==19.7.1
 html5lib==0.999
 itsdangerous==0.24
 psycopg2==2.7.4
