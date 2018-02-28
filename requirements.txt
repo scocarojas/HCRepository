@@ -5,10 +5,15 @@ Werkzeug==0.14.1
 chardet==2.2.1
 click==6.7
 colorama==0.2.5
+dj-database-url==0.4.2
 html5lib==0.999
 itsdangerous==0.24
+psycopg2==2.7.4
 pycurl==7.19.3
+pygobject==3.12.0
+python-apt==0.9.3.5ubuntu2
 requests==2.2.1
 six==1.5.2
+unattended-upgrades==0.1
 urllib3==1.7.1
 wheel==0.24.0

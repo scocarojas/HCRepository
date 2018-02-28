@@ -1,5 +1,7 @@
 import os
 import json
+import dj_database_url
+
 from datetime import datetime
 from flask import Flask, redirect, render_template, request, flash, jsonify
 
